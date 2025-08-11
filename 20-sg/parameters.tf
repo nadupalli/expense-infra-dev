@@ -51,3 +51,9 @@ resource "aws_ssm_parameter" "vpn_sg_id" {
   type  = "String"
   value = module.vpn_sg.id
 }
+
+resource "aws_ssm_parameter" "vpc_id" {
+  name  = "/expense/dev/vpc_id"
+  type  = "String"
+  value = module.vpc.vpc_id
+}
